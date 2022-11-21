@@ -2,11 +2,11 @@
  **************************************************
  *
  * @file        attiny_firmware.ino
- * @brief       Fill in sensor specific code.
+ * @brief       Attiny firmware for MOSFET with easyC
  *
 
  *
- * @authors     @ soldered.com
+ * @authors     Karlo Leksic for soldered.com
  ***************************************************/
 
 #include "easyC.h"
@@ -62,8 +62,4 @@ void receiveEvent(int howMany)
 
 void requestEvent()
 {
-    int n = 5;
-
-    char a[n];
-    Wire.write(a, n);
 }
