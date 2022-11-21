@@ -24,8 +24,8 @@ MOSFETeasyC::MOSFETeasyC(int _pin)
 }
 
 /**
- * @brief                  Constructor for MOSFET with easyC 
-*/
+ * @brief                  Constructor for MOSFET with easyC
+ */
 MOSFETeasyC::MOSFETeasyC()
 {
     native = 0;
@@ -41,11 +41,11 @@ void MOSFETeasyC::initializeNative()
 
 /**
  * @brief                   Function for turning on and off the MOSFET
- * 
+ *
  * @param state             State of switch you want to set to the MOSFET
- * 
+ *
  * @return                  None
-*/
+ */
 void MOSFETeasyC::setSwitch(bool state)
 {
     byte stateToSend = (byte)state;
@@ -54,11 +54,11 @@ void MOSFETeasyC::setSwitch(bool state)
 
 /**
  * @brief                   Function for setting PWM value to the MOSFET
- * 
+ *
  * @param pwmValue          PWM value you want to set to the mosfet
- * 
+ *
  * @return                  None
-*/
+ */
 void MOSFETeasyC::setPWM(byte pwmValue)
 {
     // Send two times just because the breakout expects 2 bytes for set PWM to MOSFET
@@ -66,4 +66,3 @@ void MOSFETeasyC::setPWM(byte pwmValue)
     pwm[0] = pwm[1] = pwmValue;
     sendData(pwm, 2);
 }
-
