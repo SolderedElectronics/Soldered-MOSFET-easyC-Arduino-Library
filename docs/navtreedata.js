@@ -24,9 +24,9 @@
 */
 var NAVTREE =
 [
-  [ "16x2 easyC LCD Library", "index.html", [
-    [ "NAZIV PROIZVODA Arduino library", "index.html", [
-      [ "Have fun!", "index.html#autotoc_md8", null ]
+  [ "Soldered MOSFET with easyC Arduino library", "index.html", [
+    [ "MOSFET with easyC Arduino library", "index.html", [
+      [ "Have fun!", "index.html#autotoc_md7", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -46,7 +46,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_generic-easy_c-_s_o_l_d_e_r_e_d_8cpp.html"
+"_m_o_s_f_e_t-easy_c-_s_o_l_d_e_r_e_d_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
