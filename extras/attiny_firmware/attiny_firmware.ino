@@ -16,6 +16,7 @@ int addr = DEFAULT_ADDRESS;
 bool mode; // Mode for the transistor -> 1 - transistor as switch, 0 - PWM
 
 byte pwmValue, swState;
+bool setValues = 0; // Flag to know when set value to the mosfet
 
 void setup()
 {
@@ -32,32 +33,42 @@ void setup()
 
 void loop()
 {
-    if (mode == 1) // Transistor as switch
+    if (setValues)
     {
-        digitalWrite(PA4, swState);
-        digitalWrite(PA5, swState);
-    }
-    else // PWM mode
-    {
-        analogWrite(PA4, pwmValue);
-    }
+        if (mode == 1) // Transistor as switch
+        {
+            digitalWrite(PA4, swState);
+            digitalWrite(PA5, swState);
+        }
+        else // PWM mode
+        {
+            analogWrite(PA4, pwmValue);
+            digitalWrite(PA5, LOW);
+        }
+
+        setValues = 0;
+    }  
+      
+    delay(10);
 }
 
 
 void receiveEvent(int howMany)
 {
+    setValues = 1;
+    
     if (Wire.available() == 1) // For switch
     {
-        mode = 1;
-        swState = Wire.read();
+        mode = 1;        
+        swState = Wire.read(); 
     }
 
-    if (Wire.available() == 2) // Fot PWM
+    if (Wire.available() == 2) // For PWM
     {
-        mode = 0;
+        mode = 0;        
         pwmValue = Wire.read();
-        pwmValue = Wire.read();
-    }
+        pwmValue = Wire.read();                
+    } 
 }
 
 void requestEvent()

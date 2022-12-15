@@ -11,8 +11,8 @@
  *
  *       Wiring diagram:
  *       VCC------[330 Ohm]------[+LED-]------[MOSFET]------GND
- * 
- * @link        solde.red/333194  
+ *
+ * @link        solde.red/333194
  *
  * @authors     Karlo Leksic for soldered.com
  ***************************************************/
@@ -23,13 +23,13 @@ MOSFETeasyC mosfet;
 
 void setup()
 {
-    mosfet.begin();
+    mosfet.begin(); // Begin I2C comunication
 }
 
 void loop()
 {
     mosfet.setSwitch(1); // Turn the MOSFET on
-    delay(1000);
+    delay(1000);         // Wait 1 second
     mosfet.setSwitch(0); // Turn the MOSFET off
-    delay(1000);
+    delay(1000);         // Wait 1 second
 }
