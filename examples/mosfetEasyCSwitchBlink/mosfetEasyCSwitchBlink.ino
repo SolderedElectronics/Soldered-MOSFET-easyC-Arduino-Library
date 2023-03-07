@@ -10,7 +10,7 @@
  *       and the ground! Also, add a 330 Ohm resistor for the LED in series.
  *
  *       Wiring diagram:
- *       VCC------[330 Ohm]------[+LED-]------[MOSFET]------GND
+ *       VCC------[330 Ohm]------[+LED-]------[+MOSFET_WITH_EASYC-]------GND
  *
  * @link        solde.red/333194
  *
