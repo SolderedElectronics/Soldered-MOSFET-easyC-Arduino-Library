@@ -6,16 +6,20 @@
 # Datatypes (KEYWORD1)
 ##################################################
 
-MOSFETeasyC KEYWORD1
+MOSFETeasyC	KEYWORD1
 
 ##################################################
 # Methods and Functions (KEYWORD2)
 ##################################################
 
-begin	  KEYWORD2
-setSwitch KEYWORD2
-setPWM    KEYWORD2
+begin	KEYWORD2
+setSwitch	KEYWORD2
+setPWM	KEYWORD2
 
 ##################################################
 # Constants (LITERAL1)
 ##################################################
+
+MOSFET_SW_CLOSED	LITERAL1
+MOSFET_SW_OPEN	LITERAL1
+	

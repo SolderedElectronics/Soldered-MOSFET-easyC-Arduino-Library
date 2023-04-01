@@ -15,6 +15,9 @@
 #include "Arduino.h"
 #include "libs/Generic-easyC/easyC.hpp"
 
+#define MOSFET_SW_CLOSED 1 // The MOSFET is turned on (the switch is closed)
+#define MOSFET_SW_OPEN   0 // The MOSFET is turned off (the switch is open)
+
 class MOSFETeasyC : public EasyC
 {
   public:
