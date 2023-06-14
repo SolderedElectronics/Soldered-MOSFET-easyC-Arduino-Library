@@ -4,6 +4,7 @@
  * @file        Mosfet_EasyC_PWM.ino
  * @brief       Example for MOSFET board with easyC.
  *              This example will show you how to control MOSFET with a PWM signal.
+ * 
  *              For this example you will need any Dasduino board, a USB-C cable, an easyC cable, a 330 Ohm resistor, and
  *              MosfetWithEasyC breakout.
  * 
